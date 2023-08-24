@@ -18,6 +18,8 @@
   "dependencies": {
     "@unocss/reset": "^0.50.1",
     "@vitejs/plugin-legacy": "^2.1.0",
+    "andro": "^2.2.9",
+    "degit": "^2.8.4",
     "postcss-load-config": "^4.0.1",
     "prettier-plugin-svelte": "^3.0.0",
     "stat-aja": "^1.0.0",
