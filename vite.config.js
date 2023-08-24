@@ -3,15 +3,18 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import legacy from "@vitejs/plugin-legacy";
 import pages from "vite-plugin-pages-svelte";
 import uno_css from "unocss/vite";
-import transformerVariantGroup from '@unocss/transformer-variant-group'
+import transformerVariantGroup from "@unocss/transformer-variant-group";
+import { presetIcons, presetUno } from "unocss";
 
-
-let plugins = [svelte(), pages(), uno_css({
-  // ...
-  transformers: [
-    transformerVariantGroup(),
-  ],
-})];
+let plugins = [
+  svelte(),
+  pages(),
+  uno_css({
+    // ...
+    transformers: [transformerVariantGroup()],
+    presets: [presetIcons(), presetUno()],
+  }),
+];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
