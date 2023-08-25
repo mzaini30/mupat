@@ -4,6 +4,9 @@
   import fasilitas from "../gambar/beranda/fasilitas.png";
   import guru from "../gambar/beranda/guru.png";
   import sekolah from "../gambar/beranda/sekolah.png";
+  import { halaman_aktif } from "../state/tombol-aktif";
+
+  $halaman_aktif = "index"
 </script>
 
 <div

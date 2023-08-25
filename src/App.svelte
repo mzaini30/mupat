@@ -9,6 +9,7 @@
   import "uno.css";
   import stat_aja from "stat-aja";
   import logo from "./gambar/logo.png";
+  import { halaman_aktif } from "./state/tombol-aktif";
 
   // stat_aja({ judul: "Judul Aplikasi", tipe: "Aplikasi Android" });
 </script>
@@ -27,11 +28,18 @@
   <Router {routes} />
 </div>
 <div
-  class="bawah fixed bottom-0 left-0 w-full bg-white shadow shadow-gray-500 grid grid-cols-4 [&_a]:(p-2 text-center text-sm text-gray-700) [&_a_span]:(block mx-auto text-[20px] mb-1)"
+  class="bawah fixed bottom-0 [&_.aktif]:text-green-600 left-0 w-full bg-white shadow shadow-gray-500 grid grid-cols-4 [&_a]:(p-2 text-center text-sm text-gray-700) [&_a_span]:(block mx-auto text-[20px] mb-1)"
 >
-  <a href="#/"><span class="i-material-symbols:home"></span> Home</a>
-  <a href="#/ppdb"><span class="i-material-symbols:person-add"></span> PPDB</a>
-  <a href="#/informasi"><span class="i-bi:info-circle-fill"></span> Informasi</a
+  <a href="#/" class={$halaman_aktif == "index" ? "aktif" : null}
+    ><span class="i-material-symbols:home"></span> Home</a
   >
-  <a href="#/profil"><span class="i-material-symbols:person"></span> Profil</a>
+  <a href="#/ppdb" class={$halaman_aktif == "ppdb" ? "aktif" : null}
+    ><span class="i-material-symbols:person-add"></span> PPDB</a
+  >
+  <a href="#/informasi" class={$halaman_aktif == "informasi" ? "aktif" : null}
+    ><span class="i-bi:info-circle-fill"></span> Informasi</a
+  >
+  <a href="#/profil" class={$halaman_aktif == "profil" ? "aktif" : null}
+    ><span class="i-material-symbols:person"></span> Profil</a
+  >
 </div>
