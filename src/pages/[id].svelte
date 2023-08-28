@@ -18,6 +18,7 @@
     });
     datanya = await datanya.json();
     data = datanya[0];
+    console.log(markdown.markdown.toHTML(data.isi));
   }
   ambil_data();
 </script>

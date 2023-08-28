@@ -20,6 +20,9 @@ dependencies:
   excalibur-zen:
     specifier: ^0.0.3
     version: 0.0.3
+  gosit:
+    specifier: ^1.0.1
+    version: 1.0.1
   markdown:
     specifier: ^0.5.0
     version: 0.5.0
@@ -1024,6 +1027,10 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       is-glob: 4.0.3
+    dev: false
+
+  /gosit@1.0.1:
+    resolution: {integrity: sha512-a9+4eVNzDNUmsshZvLM36VZLeYIoyXccoxYBpJP/uHTxJAaJUAMGW4/UiyaCFsjMCq8molALDWr0CwJcKZY1IQ==}
     dev: false
 
   /gzip-size@6.0.0:

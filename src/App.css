@@ -8,3 +8,6 @@ body {
   /* width: 350px; */
   /* height: 545px; */
 }
+iframe {
+  max-width: 100%;
+}

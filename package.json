@@ -23,6 +23,7 @@
     "andro": "^2.2.9",
     "degit": "^2.8.4",
     "excalibur-zen": "^0.0.3",
+    "gosit": "^1.0.1",
     "markdown": "^0.5.0",
     "postcss-load-config": "^4.0.1",
     "prettier-plugin-svelte": "^3.0.0",
