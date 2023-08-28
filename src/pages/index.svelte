@@ -6,29 +6,29 @@
   import sekolah from "../gambar/beranda/sekolah.png";
   import { halaman_aktif } from "../state/tombol-aktif";
 
-  $halaman_aktif = "index"
+  $halaman_aktif = "index";
 </script>
 
 <div
   class="[&_img]:(rounded-[50%] w-15 block mx-auto h-auto) p-4 grid grid-cols-3 gap-2 text-center [&_a]:mb-5"
 >
-  <a href="#/">
+  <a href="#/2">
     <img src={sekolah} alt="" />
     <p>Profil Sekolah</p>
   </a>
-  <a href="#/">
+  <a href="#/3">
     <img src={guru} alt="" />
     <p>Info Guru</p>
   </a>
-  <a href="#/">
+  <a href="#/4">
     <img src={wali_kelas} alt="" />
     <p>Info Walas</p>
   </a>
-  <a href="#/">
+  <a href="#/5">
     <img src={ekskul} alt="" />
     <p>Info Ekskul</p>
   </a>
-  <a href="#/">
+  <a href="#/6">
     <img src={fasilitas} alt="" />
     <p>Fasilitas</p>
   </a>

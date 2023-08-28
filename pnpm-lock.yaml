@@ -17,6 +17,12 @@ dependencies:
   degit:
     specifier: ^2.8.4
     version: 2.8.4
+  excalibur-zen:
+    specifier: ^0.0.3
+    version: 0.0.3
+  markdown:
+    specifier: ^0.5.0
+    version: 0.5.0
   postcss-load-config:
     specifier: ^4.0.1
     version: 4.0.1(postcss@8.4.21)
@@ -38,6 +44,9 @@ dependencies:
   vite-plugin-pages-svelte:
     specifier: 0.0.1
     version: 0.0.1(svelte-spa-router@3.3.0)(vite@3.1.2)
+  vite-plugin-yaml2:
+    specifier: ^1.1.5
+    version: 1.1.5
 
 devDependencies:
   '@iconify/json':
@@ -477,6 +486,10 @@ packages:
       systemjs: 6.12.6
       terser: 5.15.0
       vite: 3.1.2(terser@5.15.0)
+    dev: false
+
+  /abbrev@1.1.1:
+    resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: false
 
   /acorn@8.8.0:
@@ -1257,6 +1270,13 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
 
+  /markdown@0.5.0:
+    resolution: {integrity: sha512-ctGPIcuqsYoJ493sCtFK7H4UEgMWAUdXeBhPbdsg1W0LsV9yJELAHRsMmWfTgao6nH0/x5gf9FmsbxiXnrgaIQ==}
+    hasBin: true
+    dependencies:
+      nopt: 2.1.2
+    dev: false
+
   /mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
     dev: false
@@ -1301,6 +1321,13 @@ packages:
   /node-fetch-native@1.4.0:
     resolution: {integrity: sha512-F5kfEj95kX8tkDhUCYdV8dg3/8Olx/94zB8+ZNthFs6Bz31UpUi8Xh40TN3thLwXgrwXry1pEg9lJ++tLWTcqA==}
     dev: true
+
+  /nopt@2.1.2:
+    resolution: {integrity: sha512-x8vXm7BZ2jE1Txrxh/hO74HTuYZQEbo8edoRcANgdZ4+PCV+pbjd/xdummkmjjC7LU5EjPzlu8zEq/oxWylnKA==}
+    hasBin: true
+    dependencies:
+      abbrev: 1.1.1
+    dev: false
 
   /normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
@@ -1690,6 +1717,10 @@ packages:
       vite: 3.1.2(terser@5.15.0)
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /vite-plugin-yaml2@1.1.5:
+    resolution: {integrity: sha512-98PPEBWmyS+t2KcvGXfvnX83+QRGedpyPkDwluUAzCyCquwJzYsUNqfNzJHDk2/52d8uoCmJTZJpnQMls7LNtw==}
     dev: false
 
   /vite@3.1.2(terser@5.15.0):

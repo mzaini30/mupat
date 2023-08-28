@@ -4,15 +4,17 @@ import legacy from "@vitejs/plugin-legacy";
 import pages from "vite-plugin-pages-svelte";
 import uno_css from "unocss/vite";
 import transformerVariantGroup from "@unocss/transformer-variant-group";
-import { presetIcons, presetUno } from "unocss";
+import { presetIcons, presetUno, presetTypography } from "unocss";
+import yaml from "vite-plugin-yaml2";
 
 let plugins = [
   svelte(),
   pages(),
+  yaml(),
   uno_css({
     // ...
     transformers: [transformerVariantGroup()],
-    presets: [presetIcons(), presetUno()],
+    presets: [presetIcons(), presetUno(), presetTypography()],
   }),
 ];
 
