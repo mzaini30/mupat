@@ -1,5 +1,6 @@
 <script>
   import { halaman_aktif } from "../state/tombol-aktif";
+  import TampilkanPostingan from "../komponen/tampilkan-postingan.svelte";
 
   $halaman_aktif = "informasi";
 </script>
@@ -12,3 +13,4 @@
   frameborder="0"
   allowfullscreen
 ></iframe> -->
+<TampilkanPostingan kategori="informasi"></TampilkanPostingan>

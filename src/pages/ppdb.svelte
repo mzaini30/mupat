@@ -1,6 +1,7 @@
 <script>
   import { halaman_aktif } from "../state/tombol-aktif";
   import gosit from "gosit";
+  import TampilkanPostingan from "../komponen/tampilkan-postingan.svelte";
 
   let banyaknya_yang_mendaftar = 0;
 
@@ -27,6 +28,7 @@
     >Pendaftaran Siswa Baru</a
   >
 </div>
+<TampilkanPostingan kategori="ppdb"></TampilkanPostingan>
 
 <!-- <iframe
   class="w-full min-h-100"
