@@ -58,7 +58,7 @@
 <!-- <pre>{JSON.stringify(data, null, 2)}</pre> -->
 <div class="p-3 grid grid-cols-1 gap-2">
   {#each data as x}
-    <a href="#/{x.id}" class="rounded border block overflow-hidden">
+    <a href="#/tulisan/{x.id}" class="rounded border block overflow-hidden">
       <img src={x.gambar_pertama} alt="" />
       <span class="p-2 block">{x.judul}</span>
     </a>
