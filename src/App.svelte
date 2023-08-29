@@ -14,11 +14,16 @@
   // stat_aja({ judul: "Judul Aplikasi", tipe: "Aplikasi Android" });
 </script>
 
-<div class="bg-[#a7f3d0] w-full h-20 absolute top-0 left-0"></div>
+<div class="bg-[#a7f3d0] w-full h-25 absolute top-0 left-0"></div>
 <div class="p-2 z-99 relative">
   <div class=" inline-block">
-    <img class="h-auto w-[70px] block mx-auto" src={logo} alt="" />
-    <p class="text-[12px] text-teal-800">Sekolah Tahfidz Al-Qur'an</p>
+    <div class="grid grid-cols-2">
+      <img class="h-auto w-[70px] block mx-auto" src={logo} alt="" />
+      <div>
+        <p class=" text-xl">MUP4T</p>
+        <p class="text-[12px] text-teal-800">Sekolah Tahfidz Al-Qur'an</p>
+      </div>
+    </div>
   </div>
 </div>
 <div class="scale-y-[-1] -mt-15">

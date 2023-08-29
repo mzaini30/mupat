@@ -2,6 +2,7 @@
   import excalibur from "excalibur-zen";
   import api from "../data/api.yml";
   import markdown from "markdown";
+  import { marked, parse } from "marked";
 
   export let params;
 
@@ -18,7 +19,7 @@
     });
     datanya = await datanya.json();
     data = datanya[0];
-    console.log(markdown.markdown.toHTML(data.isi));
+    // console.log(markdown.markdown.toHTML(data.isi));
   }
   ambil_data();
 </script>
@@ -26,5 +27,5 @@
 <!-- {JSON.stringify(data)} -->
 <div class="prose max-w-full p-3">
   <h1>{data.judul}</h1>
-  {@html markdown.markdown.toHTML(data.isi)}
+  {@html marked(data.isi)}
 </div>

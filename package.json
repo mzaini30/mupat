@@ -25,6 +25,7 @@
     "excalibur-zen": "^0.0.3",
     "gosit": "^1.0.1",
     "markdown": "^0.5.0",
+    "marked": "^7.0.5",
     "postcss-load-config": "^4.0.1",
     "prettier-plugin-svelte": "^3.0.0",
     "stat-aja": "^1.0.0",
