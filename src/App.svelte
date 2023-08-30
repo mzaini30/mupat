@@ -4,6 +4,7 @@
   // @ts-ignore
   import routes from "virtual:generated-pages-svelte";
   import "@unocss/reset/tailwind.css";
+  import logo_mupat from "./gambar/LOGO MUP4T TERBARU.png";
   // import "warna-tailwind/warna.css";
   import "./App.css";
   import "uno.css";
@@ -14,14 +15,14 @@
   // stat_aja({ judul: "Judul Aplikasi", tipe: "Aplikasi Android" });
 </script>
 
-<div class="bg-[#a7f3d0] w-full h-25 absolute top-0 left-0"></div>
-<div class="p-2 z-99 relative">
+<div class="bg-[#a7f3d0] w-full h-18 absolute top-0 left-0"></div>
+<div class="p-4 z-99 relative">
   <div class=" inline-block">
     <!-- <div class="grid grid-cols-2"> -->
-    <img class="h-auto w-[70px] block mx-auto" src={logo} alt="" />
+    <img class="h-auto w-[200px] block mx-auto" src={logo_mupat} alt="" />
     <!-- <div> -->
-    <p class="text-center text-xl">MUP4T</p>
-    <p class="text-[12px] text-teal-800">Sekolah Tahfidz Al-Qur'an</p>
+    <!-- <p class="text-center text-xl">MUP4T</p>
+    <p class="text-[12px] text-teal-800">Sekolah Tahfidz Al-Qur'an</p> -->
     <!-- </div> -->
     <!-- </div> -->
   </div>
