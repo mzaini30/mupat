@@ -1,2 +1,3 @@
 server: https://sdmuh4t-smr.sch.id/excalibur/sql.php
 tulisan: 5bef0ff56033e0d97770f0e23cea2474 # id, judul, isi
+auth: 0ce5bba79b60d7fed796f33ec9cb9080 # id, nama, username, password, kode_unik

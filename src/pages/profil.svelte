@@ -1,25 +1,67 @@
 <script>
   import { halaman_aktif } from "../state/tombol-aktif";
+  import localforage from "localforage";
+  import toast from "only-toast";
+  import api from "../data/api.yml";
+  import excaliburZen from "excalibur-zen";
 
   let kode_unik;
-  let id = "0ce5bba79b60d7fed796f33ec9cb9080"; // id, nama, username, password, kode_unik
+  // let id = "0ce5bba79b60d7fed796f33ec9cb9080"; // id, nama, username, password, kode_unik
   // https://sdmuh4t-smr.sch.id/excalibur/scubus-index.php?halaman=olah-sql&database=0ce5bba79b60d7fed796f33ec9cb9080
   let is_login = false;
+  let username, password;
+  let data_profil = {};
+
+  async function cek_is_login() {
+    let ceknya = await localforage.getItem("is_login");
+    if (ceknya && ceknya == true) {
+      is_login = true;
+    }
+  }
+  cek_is_login();
 
   kode_unik = crypto.randomUUID().split("-")[0];
 
   $halaman_aktif = "profil";
+
+  async function mulai_login() {
+    let yuk_login = await excaliburZen(api.server, {
+      id: api.auth,
+      kunci: "cek-kombinasi-username-dan-password",
+      username,
+      password,
+    });
+    yuk_login = await yuk_login.json();
+    let banyaknya = yuk_login[0].banyak;
+    if (banyaknya == 1) {
+      // jika benar
+      is_login = true;
+      let ambil_datanya = await excaliburZen(api.server, {
+        id: api.auth,
+        kunci: "ambil-isinya",
+        username,
+        password,
+      });
+      ambil_datanya = await ambil_datanya.json();
+      data_profil = ambil_datanya[0];
+    } else {
+      toast("Kombinasi username dan password salah");
+      username = "";
+      password = "";
+      // jika salah
+    }
+  }
 </script>
 
 <div
   class="p-4 [&_.input]:(block border border-blue-500 rounded p-1 w-full mb-3) [&_.tombol]:(bg-green-500 text-white text-center w-full p-3 rounded)"
 >
   {#if is_login}{:else}
-    <form action="">
+    <form action="" on:submit|preventDefault={mulai_login}>
       <label>Username</label>
-      <input class="input" type="text" />
+      <input class="input" type="text" bind:value={username} />
       <label>Password</label>
-      <input type="text" class="input" />
+      <input type="password" bind:value={password} class="input" />
       <input type="submit" class="tombol" value="Login" />
     </form>
     <p class="mt-10 text-center">
