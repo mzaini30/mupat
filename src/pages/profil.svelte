@@ -17,12 +17,21 @@
     if (ceknya && ceknya == true) {
       is_login = true;
     }
+    let ambil_data_profil = await localforage.getItem("data_profil");
+    if (ambil_data_profil) {
+      data_profil = ambil_data_profil;
+    }
   }
   cek_is_login();
 
   kode_unik = crypto.randomUUID().split("-")[0];
 
   $halaman_aktif = "profil";
+
+  async function keluar() {
+    localforage.setItem("is_login", false);
+    is_login = false;
+  }
 
   async function mulai_login() {
     let yuk_login = await excaliburZen(api.server, {
@@ -36,6 +45,7 @@
     if (banyaknya == 1) {
       // jika benar
       is_login = true;
+      localforage.setItem("is_login", true);
       let ambil_datanya = await excaliburZen(api.server, {
         id: api.auth,
         kunci: "ambil-isinya",
@@ -44,6 +54,8 @@
       });
       ambil_datanya = await ambil_datanya.json();
       data_profil = ambil_datanya[0];
+      localforage.setItem("data_profil", data_profil);
+      toast(`Selamat datang ${data_profil.nama}`);
     } else {
       toast("Kombinasi username dan password salah");
       username = "";
@@ -56,7 +68,19 @@
 <div
   class="p-4 [&_.input]:(block border border-blue-500 rounded p-1 w-full mb-3) [&_.tombol]:(bg-green-500 text-white text-center w-full p-3 rounded)"
 >
-  {#if is_login}{:else}
+  {#if is_login}
+    <!-- <pre>{JSON.stringify(data_profil, null, 2)}</pre> -->
+    <h1 class="text-[30px]">{data_profil.nama}</h1>
+    <p>{data_profil.kode_unik}</p>
+    <div
+      class="grid pt-4 grid-cols-2 gap-4 [&>*]:(bg-red-500 text-white block text-center p-3 rounded)"
+    >
+      <button on:click={keluar}>Logout</button>
+      <a href="#/ganti-password/{encodeURIComponent(data_profil.username)}"
+        >Ganti Password</a
+      >
+    </div>
+  {:else}
     <form action="" on:submit|preventDefault={mulai_login}>
       <label>Username</label>
       <input class="input" type="text" bind:value={username} />
