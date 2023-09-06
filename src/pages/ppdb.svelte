@@ -9,7 +9,7 @@
 
   async function run() {
     let result = await gosit(
-      "1oyMFLapk7et99ygMKYq8sJbKs2uX2_SaBzTpmd2Xg5c", // spreadsheet id
+      "1S_-lKdbmroS6h1LJg9_9oVqwPLHl5R_TuZzrfeIdlio", // spreadsheet id
       "Form Responses 1", // sheet name
     );
     // console.log(result);
@@ -24,8 +24,7 @@
   </p>
   <a
     class="rounded p-2 bg-green-500 text-white w-full block text-center"
-    href="#/form"
-    >Pendaftaran Siswa Baru</a
+    href="#/form">Pendaftaran Siswa Baru</a
   >
 </div>
 <TampilkanPostingan kategori="ppdb"></TampilkanPostingan>
