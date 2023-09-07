@@ -11,6 +11,7 @@
   let is_login = false;
   let username, password;
   let data_profil = {};
+  let is_admin = false;
 
   async function cek_is_login() {
     let ceknya = await localforage.getItem("is_login");
@@ -56,6 +57,11 @@
       data_profil = ambil_datanya[0];
       localforage.setItem("data_profil", data_profil);
       toast(`Selamat datang ${data_profil.nama}`);
+      if (data_profil.username == "admin") {
+        is_admin = true;
+      } else {
+        is_admin = false;
+      }
     } else {
       toast("Kombinasi username dan password salah");
       username = "";
@@ -72,6 +78,13 @@
     <!-- <pre>{JSON.stringify(data_profil, null, 2)}</pre> -->
     <h1 class="text-[30px]">{data_profil.nama}</h1>
     <p>{data_profil.kode_unik}</p>
+    {#if is_admin}
+      <a
+        class="w-full rounded bg-green-500 p-2 text-white block text-center mt-3"
+        href="https://bea493d6-75bf-4a34-92bb-1660cc05090b.vercel.app/#/tulisan-baru"
+        >Dashboard Admin</a
+      >
+    {/if}
     <div
       class="grid pt-4 grid-cols-2 gap-4 [&>*]:(bg-red-500 text-white block text-center p-3 rounded)"
     >
