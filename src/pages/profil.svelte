@@ -2,7 +2,7 @@
   import { halaman_aktif } from "../state/tombol-aktif";
   import localforage from "localforage";
   import toast from "only-toast";
-  import api from "../data/api.yml";
+  import api from "../data/api.json";
   import excaliburZen from "excalibur-zen";
 
   let kode_unik;
@@ -12,6 +12,10 @@
   let username, password;
   let data_profil = {};
   let is_admin = false;
+
+  if (localStorage.is_admin && JSON.parse(localStorage.is_admin) == true) {
+    is_admin = true;
+  }
 
   async function cek_is_login() {
     let ceknya = await localforage.getItem("is_login");
@@ -59,8 +63,10 @@
       toast(`Selamat datang ${data_profil.nama}`);
       if (data_profil.username == "admin") {
         is_admin = true;
+        localStorage.is_admin = JSON.stringify(true);
       } else {
         is_admin = false;
+        localStorage.is_admin = JSON.stringify(false);
       }
     } else {
       toast("Kombinasi username dan password salah");

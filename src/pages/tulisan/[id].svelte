@@ -1,6 +1,6 @@
 <script>
   import excalibur from "excalibur-zen";
-  import api from "../../data/api.yml";
+  import api from "../../data/api.json";
   import markdown from "markdown";
   import { marked, parse } from "marked";
 

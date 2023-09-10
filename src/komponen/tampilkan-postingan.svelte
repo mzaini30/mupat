@@ -2,7 +2,7 @@
   export let kategori;
 
   import excaliburZen from "excalibur-zen";
-  import api from "../data/api.yml";
+  import api from "../data/api.json";
   import { lexer } from "marked";
 
   let data = [];
@@ -57,10 +57,12 @@
 
 <!-- <pre>{JSON.stringify(data, null, 2)}</pre> -->
 <div class="p-3 grid grid-cols-1 gap-2">
-  {#each data as x}
-    <a href="#/tulisan/{x.id}" class="rounded border block overflow-hidden">
-      <img src={x.gambar_pertama} alt="" />
-      <span class="p-2 block">{x.judul}</span>
-    </a>
-  {/each}
+  {#if data}
+    {#each data as x}
+      <a href="#/tulisan/{x.id}" class="rounded border block overflow-hidden">
+        <img src={x.gambar_pertama} alt="" />
+        <span class="p-2 block">{x.judul}</span>
+      </a>
+    {/each}
+  {/if}
 </div>

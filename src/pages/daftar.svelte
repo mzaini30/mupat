@@ -1,6 +1,6 @@
 <script>
   import excaliburZen from "excalibur-zen";
-  import api from "../data/api.yml";
+  import api from "../data/api.json";
   import toast from "only-toast";
   import { push } from "svelte-spa-router";
 
