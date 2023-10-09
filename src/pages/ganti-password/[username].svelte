@@ -37,7 +37,7 @@
 
 <form
   action=""
-  class="p-4 [&_.input]:(block border border-blue-500 rounded p-1 w-full mb-3) [&_.tombol]:(bg-green-500 text-white text-center w-full p-3 rounded)"
+  class="p-4 [&_.input]:block [&_.input]:border [&_.input]:border-blue-500 [&_.input]:rounded [&_.input]:p-1 [&_.input]:w-full [&_.input]:mb-3 [&_.tombol]:bg-green-500 [&_.tombol]:text-white [&_.tombol]:text-center [&_.tombol]:w-full [&_.tombol]:p-3 [&_.tombol]:rounded"
   on:submit|preventDefault={mengganti_password}
 >
   <label for="">Password Lama</label>

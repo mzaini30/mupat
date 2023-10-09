@@ -78,21 +78,21 @@
 </script>
 
 <div
-  class="p-4 [&_.input]:(block border border-blue-500 rounded p-1 w-full mb-3) [&_.tombol]:(bg-green-500 text-white text-center w-full p-3 rounded)"
+  class="p-4 [&_.input]:block [&_.input]:border [&_.input]:border-blue-500 [&_.input]:rounded [&_.input]:p-1 [&_.input]:w-full [&_.input]:mb-3 [&_.tombol]:bg-green-500 [&_.tombol]:text-white [&_.tombol]:text-center [&_.tombol]:w-full [&_.tombol]:p-3 [&_.tombol]:rounded"
 >
   {#if is_login}
     <!-- <pre>{JSON.stringify(data_profil, null, 2)}</pre> -->
-    <h1 class="text-[30px]">{data_profil.nama}</h1>
-    <p>{data_profil.kode_unik}</p>
+    <h1 class="text-xl">Assalamualaikum, {data_profil.nama}</h1>
+    <p class="badge badge-neutral">{data_profil.kode_unik}</p>
     {#if is_admin}
       <a
         class="w-full rounded bg-green-500 p-2 text-white block text-center mt-3"
-        href="https://bea493d6-75bf-4a34-92bb-1660cc05090b.vercel.app/#/tulisan-baru"
+        href="https://bea493d6-75bf-4a34-92bb-1660cc05090b.vercel.app/"
         >Dashboard Admin</a
       >
     {/if}
     <div
-      class="grid pt-4 grid-cols-2 gap-4 [&>*]:(bg-red-500 text-white block text-center p-3 rounded)"
+      class="grid pt-4 grid-cols-2 gap-4 [&>*]:bg-red-500 [&>*]:text-white [&>*]:block [&>*]:text-center [&>*]:p-3 [&>*]:rounded"
     >
       <button on:click={keluar}>Logout</button>
       <a href="#/ganti-password/{encodeURIComponent(data_profil.username)}"

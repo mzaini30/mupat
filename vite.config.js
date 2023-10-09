@@ -11,11 +11,11 @@ let plugins = [
   svelte(),
   pages(),
   yaml(),
-  uno_css({
-    // ...
-    transformers: [transformerVariantGroup()],
-    presets: [presetIcons(), presetUno(), presetTypography()],
-  }),
+  // uno_css({
+  //   // ...
+  //   transformers: [transformerVariantGroup()],
+  //   presets: [presetIcons(), presetUno(), presetTypography()],
+  // }),
 ];
 
 // https://vitejs.dev/config/

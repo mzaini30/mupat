@@ -10,7 +10,7 @@
 </script>
 
 <div
-  class="[&_img]:(rounded-[50%] w-15 block mx-auto h-auto) p-4 grid grid-cols-3 gap-2 text-center [&_a]:mb-5"
+  class="[&_img]:rounded-[50%] [&_img]:w-[3.75rem] [&_img]:block [&_img]:mx-auto [&_img]:h-auto p-4 grid grid-cols-3 gap-2 text-center [&_a]:mb-5"
 >
   <a href="#/tulisan/2">
     <img src={sekolah} alt="" />
