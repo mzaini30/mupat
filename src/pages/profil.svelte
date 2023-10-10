@@ -83,7 +83,7 @@
   {#if is_login}
     <!-- <pre>{JSON.stringify(data_profil, null, 2)}</pre> -->
     <h1 class="text-xl">Assalamualaikum, {data_profil.nama}</h1>
-    <p class="badge badge-neutral">{data_profil.kode_unik}</p>
+    <p class="badge badge-neutral">ID User : {data_profil.kode_unik}</p>
     {#if is_admin}
       <a
         class="w-full rounded bg-green-500 p-2 text-white block text-center mt-3"
