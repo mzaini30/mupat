@@ -56,12 +56,12 @@
 </script>
 
 <!-- <pre>{JSON.stringify(data, null, 2)}</pre> -->
-<div class="p-3 grid grid-cols-1 gap-2">
+<div class="p-3 grid grid-cols-2 gap-2">
   {#if data}
     {#each data as x}
       <a href="#/tulisan/{x.id}" class="rounded border block overflow-hidden">
         <img src={x.gambar_pertama} alt="" />
-        <span class="p-2 block">{x.judul}</span>
+        <span class="p-2 block text-sm">{x.judul}</span>
       </a>
     {/each}
   {/if}
